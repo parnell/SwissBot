@@ -56,9 +56,9 @@ all scores
                  SwissBot\*   Good Human   Best Human   Best Bot\*   Best Bot\*\*
   -------------- ------------ ------------ ------------ ------------ --------------
   Max            272,000      182,000      271,000      322,000      439,000
-  Average        143,000      47,000                                 
-  Standard Dev   37,000       44,000                                 
-  Min            55,000       25,000                                 
+  Average        143,000      47,000
+  Standard Dev   37,000       44,000
+  Min            55,000       25,000
 
   : *Scores*
 
@@ -105,7 +105,7 @@ the support vector machine library from [libsvm]
 Probably the most difficult part of the project was correctly
 identifying the board state. Individual blocks can often be occluded, be
 off center(while dropping), or will glow brightly.\
-![][1] ![][2]![][3]
+![][occl1] ![][occl2]![][occl3]
 
 Additionally the high amount of white, or lightness, can make
 distinguishing individual blocks problematic. Below are a white block
@@ -128,9 +128,9 @@ orange.\
   [1]: swissbot_files/bb_highscore_272.png
   [2]: swissbot_files/bb_avg.png
   [libsvm]: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
-  [1]: swissbot_files/occlusion.png
-  [2]: swissbot_files/power_break.png
-  [3]: swissbot_files/3xscoring.png
+  [occl1]: swissbot_files/occlusion.png
+  [occl2]: swissbot_files/power_break.png
+  [occl3]: swissbot_files/3xscoring.png
   [4]: swissbot_files/white.png
   [5]: swissbot_files/gl_white1.png
   [6]: swissbot_files/orange_selected.png
