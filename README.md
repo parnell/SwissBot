@@ -53,8 +53,86 @@ is a friend of mine and trust me, he\'s very good. His high score of
 182,000 according to the Bejeweled Blitz site puts that in the top 4% of
 all scores
 
-*Scores*
+                 SwissBot\*   Good Human   Best Human   Best Bot\*   Best Bot\*\*
+  -------------- ------------ ------------ ------------ ------------ --------------
+  Max            272,000      182,000      271,000      322,000      439,000
+  Average        143,000      47,000                                 
+  Standard Dev   37,000       44,000                                 
+  Min            55,000       25,000                                 
+
+  : *Scores*
+
+\*: Standard Interfaces: The bot has to capture the screen and parse the
+board information. Also uses the mouse to move and click.\
+\*\*: Bot can get game state directly from javascript. Sends move
+information directly to game without using mouse.
+
+#### Goal Results
+
+-   Extendable: Decent, I think I have abstracted a lot of functionality
+    that is common to all games of this nature. Of course until I
+    program another game with it this is all subjective. The use of Java
+    also helps in this area as it\'s kind of a cobble together sort of
+    language.
+-   Optimality: Mixed Results\
+    -   Speed: Good, Multithreading and Parallelism implemented. The
+        program itself runs quickly, you can see details of my machine
+        below
+    -   Board Recognition: Meh, as I thought when I started correctly
+        interpreting the game board is hard and remains an issue, see
+        details below
+    -   Game Logic: Good, most of the game state and breaking logic
+        implemented.
+-   Use Standard Interfaces: Good and Done.
+
+Details & Difficulties
+----------------------
+
+### Implementation Details
+
+SwissBot is written in Java, mainly because of java.awt.Robot which has
+the great features for doing screen capture and the ability to control
+the mouse without using system specific libraries.
+
+It has implemented parallel threaded versions of breadth first
+search(BFS) and depth first search(DFS).
+
+Uses a machine learning approach for interpreting the game board using
+the support vector machine library from [libsvm]
+
+### Difficulties
+
+Probably the most difficult part of the project was correctly
+identifying the board state. Individual blocks can often be occluded, be
+off center(while dropping), or will glow brightly.\
+![][1] ![][2]![][3]
+
+Additionally the high amount of white, or lightness, can make
+distinguishing individual blocks problematic. Below are a white block
+and a glowing white block which visually are nearly identical.\
+![][4]![][5]
+
+\
+Here another example which is also hard(though much easier than the
+above). On the left a selected orange piece and on the right a glowing
+orange.\
+![][6]![][7]
+
+\
+
+### Computer Details
+
+![][8]
 
   [here]: swissbot_files/code
   [1]: swissbot_files/bb_highscore_272.png
   [2]: swissbot_files/bb_avg.png
+  [libsvm]: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+  [1]: swissbot_files/occlusion.png
+  [2]: swissbot_files/power_break.png
+  [3]: swissbot_files/3xscoring.png
+  [4]: swissbot_files/white.png
+  [5]: swissbot_files/gl_white1.png
+  [6]: swissbot_files/orange_selected.png
+  [7]: swissbot_files/gl_orange.png
+  [8]: swissbot_files/comp_details.png
