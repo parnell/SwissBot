@@ -53,12 +53,12 @@ is a friend of mine and trust me, he\'s very good. His high score of
 182,000 according to the Bejeweled Blitz site puts that in the top 4% of
 all scores
 
-                 SwissBot\*   Good Human   Best Human   Best Bot\*   Best Bot\*\*
-  -------------- ------------ ------------ ------------ ------------ --------------
-  Max            272,000      182,000      271,000      322,000      439,000
-  Average        143,000      47,000
-  Standard Dev   37,000       44,000
-  Min            55,000       25,000
+SwissBot\* | Good Human | Best Human | Best Bot\* | Best Bot\*\*
+--- | --- | --- | --- | ---
+  Max --- 272,000 --- 182,000 --- 271,000 --- 322,000 --- 439,000
+  Average --- 143,000 --- 47,000
+  Standard Dev --- 37,000 --- 44,000
+  Min --- 55,000 --- 25,000
 
   : *Scores*
 
